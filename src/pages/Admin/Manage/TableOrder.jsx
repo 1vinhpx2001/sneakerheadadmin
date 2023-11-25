@@ -523,7 +523,7 @@ function TableOrder({ orders, show }) {
                     shadow
                     noMargin
                     align="center"
-                    color={'warning'}
+                    color={'primary'}
                     rowsPerPage={10}
                 />
             </Table>

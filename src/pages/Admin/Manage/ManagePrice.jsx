@@ -254,7 +254,7 @@ function ManagePrice({ products, show }) {
                     shadow
                     noMargin
                     align="center"
-                    color={'warning'}
+                    color={'primary'}
                     rowsPerPage={10}
                 />
 

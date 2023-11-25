@@ -269,7 +269,7 @@ function TableProduct({ products, show }) {
                     shadow
                     noMargin
                     align="center"
-                    color={'warning'}
+                    color={'primary'}
                     rowsPerPage={6}
                 />
 

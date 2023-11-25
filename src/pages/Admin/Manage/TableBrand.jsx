@@ -395,7 +395,7 @@ function TableBrand({ brands, show }) {
                     shadow
                     noMargin
                     align="center"
-                    color={'warning'}
+                    color={'primary'}
                     rowsPerPage={3}
                 />
             </Table>

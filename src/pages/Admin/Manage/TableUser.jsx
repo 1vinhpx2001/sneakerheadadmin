@@ -385,7 +385,7 @@ function TableUser({ users, show }) {
                     shadow
                     noMargin
                     align="center"
-                    color={'warning'}
+                    color={'primary'}
                     rowsPerPage={5}
                 />
             </Table>
