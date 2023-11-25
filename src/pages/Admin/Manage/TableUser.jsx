@@ -105,7 +105,7 @@ export function AddModal() {
     }
     return (
         <div>
-            <Button auto ghost onClick={handler} color={'warning'}>
+            <Button auto solid onClick={handler} color={'success'}>
                 Thêm tài khoản
             </Button>
             <Modal
@@ -267,7 +267,7 @@ function TableUser({ users, show }) {
                     <CSVLink
                         data={users.list}
                         filename={"users.csv"}
-                        className="btn btn-primary"
+                        className="btn btn-info"
                         target="_blank"
                         style={{ marginRight: 10 }}
                     >

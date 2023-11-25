@@ -74,7 +74,7 @@ export function AddModal() {
     }
     return (
         <div>
-            <Button auto ghost onClick={handler} color={'warning'}>
+            <Button auto solic onClick={handler} color={'success'}>
                 Thêm nhãn hàng
             </Button>
             <Modal
@@ -288,7 +288,7 @@ function TableBrand({ brands, show }) {
                     <CSVLink
                         data={brands}
                         filename={"brands.csv"}
-                        className="btn btn-primary"
+                        className="btn btn-info"
                         target="_blank"
                         style={{ marginRight: 10 }}
                     >

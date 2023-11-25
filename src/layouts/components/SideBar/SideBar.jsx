@@ -133,6 +133,7 @@ function SideBar() {
     return (
         <Collapse.Group css={{ width: '100%'}}>
             {userCur.role === 'ROLE_ADMIN' ?
+            
                 <>
                     <Collapse title={userCur.name} contentLeft={<Avatar
                         size="lg"
@@ -142,23 +143,23 @@ function SideBar() {
                         <Button onClick={handleLogout} light auto color={'error'}>Đăng xuất</Button>
                     </Collapse>
                     <Collapse contentLeft={<BarChart/>} title="Thống kê">
-                        <Button onClick={handleStatistic} light auto color={'warning'}>Xem thống kê</Button>
+                        <Button onClick={handleStatistic} light auto color={'primary'}>Xem thống kê</Button>
                     </Collapse>
                     <Collapse contentLeft={<Person/>} title="Tài khoản">
-                        <Button onClick={handleUserManage} light auto color={'warning'}>Quản lý tài khoản </Button>
+                        <Button onClick={handleUserManage} light auto color={'primary'}>Quản lý tài khoản </Button>
                     </Collapse>
                     <Collapse contentLeft={<Inventory/>} title="Sản phẩm">
-                        <Button onClick={handleProductManage} light auto color={'warning'}>Quản lý sản phẩm </Button>
-                        <Button onClick={handleProductManagePrice} light auto color={'warning'}>Quản lý giá sản phẩm </Button>
+                        <Button onClick={handleProductManage} light auto color={'primary'}>Quản lý sản phẩm </Button>
+                        <Button onClick={handleProductManagePrice} light auto color={'primary'}>Quản lý giá sản phẩm </Button>
                     </Collapse>
                     <Collapse contentLeft={<Category/>} title="Danh mục">
-                        <Button onClick={handleCategoryManage} light auto color={'warning'}>Quản lý danh mục </Button>
+                        <Button onClick={handleCategoryManage} light auto color={'primary'}>Quản lý danh mục </Button>
                     </Collapse>
                     <Collapse contentLeft={<BrandingWatermark/>} title="Nhãn hàng">
-                        <Button onClick={handleBrandManage} light auto color={'warning'}>Quản lý nhãn hàng </Button>
+                        <Button onClick={handleBrandManage} light auto color={'primary'}>Quản lý nhãn hàng </Button>
                     </Collapse>
                     <Collapse contentLeft={<ReceiptLong/>} title="Đơn hàng">
-                        <Button onClick={handleOrderManage} light auto color={'warning'}>Quản lý đơn hàng</Button>
+                        <Button onClick={handleOrderManage} light auto color={'primary'}>Quản lý đơn hàng</Button>
                     </Collapse>
                     
                 </> :
@@ -167,7 +168,6 @@ function SideBar() {
                         size="lg"
                         src={userCur.avatar}
                         bordered
-                        
                     />}>
                         <Button onClick={handleLogout} light auto color={'warning'}>Đăng xuất</Button>
                     </Collapse>

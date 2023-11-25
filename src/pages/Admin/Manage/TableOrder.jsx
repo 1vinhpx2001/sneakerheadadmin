@@ -396,7 +396,7 @@ function TableOrder({ orders, show }) {
                 <CSVLink
                     data={orders.list}
                     filename={"orders.csv"}
-                    className="btn btn-primary"
+                    className="btn btn-info"
                     target="_blank"
                 >
                     Xuất CSV

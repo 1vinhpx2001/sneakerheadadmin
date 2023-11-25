@@ -132,13 +132,15 @@ function TableProduct({ products, show }) {
                     <CSVLink
                         data={products.list}
                         filename={"products.csv"}
-                        className="btn btn-primary"
+                        className="btn btn-success"
                         target="_blank"
                         style={{ marginRight: 10 }}
                     >
                         Xuất CSV
                     </CSVLink>
-                    <Button auto ghost color={'warning'} onClick={() => navigate('/admin/addProduct')}>Thêm sản phẩm</Button>
+                    <Button auto solid color={'success'} onClick={() => navigate('/admin/addProduct')}>
+                        Thêm sản phẩm
+                    </Button>
                 </div>
             </Row>
             <Row justify='space-between' align='center' css={{ marginBottom: '$4' }}>

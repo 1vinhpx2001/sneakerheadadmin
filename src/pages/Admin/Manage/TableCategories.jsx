@@ -58,7 +58,7 @@ export function AddModal({ categories }) {
     }
     return (
         <div>
-            <Button auto ghost onClick={handler} color={'warning'}>
+            <Button auto solid onClick={handler} color={'success'}>
                 Thêm danh mục
             </Button>
             <Modal
@@ -239,7 +239,7 @@ function TableCategories({ categories, show }) {
                     <CSVLink
                         data={categories}
                         filename={"categories.csv"}
-                        className="btn btn-primary"
+                        className="btn btn-info"
                         target="_blank"
                         style={{ marginRight: 10 }}
                     >
