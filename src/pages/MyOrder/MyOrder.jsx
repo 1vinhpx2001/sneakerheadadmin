@@ -46,7 +46,7 @@ export default function MyOrder() {
             {loading === true ? (
                 <Grid.Container wrap="wrap" justify="center" gap={2}>
                     <Grid xs={12} css={{ w: '100vw', h: '100vh' }} alignItems="center" justify="center">
-                        <Loading size="xl" type="gradient" color={'warning'} />
+                        <Loading size="xl" type="gradient" color={'primary'} />
                     </Grid>
                 </Grid.Container>
             ) : (

@@ -725,7 +725,7 @@ function UpdateProduct() {
             <CssBaseline />
             {Object.keys(product).length === 0 && product.constructor === Object ?
                 <Grid container gap={2} justifyContent='center' alignItems={'center'} height={'100vh'} wrap='wrap' >
-                    <Loading size='xl' type='gradient' color={'warning'} />
+                    <Loading size='xl' type='gradient' color={'primary'} />
                 </Grid> :
                 <>
                     <Grid container>

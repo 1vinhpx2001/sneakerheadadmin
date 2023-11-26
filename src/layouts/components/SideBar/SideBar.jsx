@@ -15,14 +15,14 @@ function SideBar() {
         let category = document.getElementById('category');
         let brand = document.getElementById('brand');
         let stats = document.getElementById('stats')
-        
+
         product.removeAttribute('hidden')
-        managePrice.setAttribute('hidden',true)
+        managePrice.setAttribute('hidden', true)
         order.setAttribute('hidden', true)
         user.setAttribute('hidden', true)
         category.setAttribute('hidden', true)
         brand.setAttribute('hidden', true)
-        stats.setAttribute('hidden',true)
+        stats.setAttribute('hidden', true)
     }
     const handleProductManagePrice = () => {
         let order = document.getElementById('order')
@@ -32,14 +32,14 @@ function SideBar() {
         let category = document.getElementById('category');
         let brand = document.getElementById('brand');
         let stats = document.getElementById('stats')
-        
+
         managePrice.removeAttribute('hidden')
-        product.setAttribute('hidden',true)
+        product.setAttribute('hidden', true)
         order.setAttribute('hidden', true)
         user.setAttribute('hidden', true)
         category.setAttribute('hidden', true)
         brand.setAttribute('hidden', true)
-        stats.setAttribute('hidden',true)
+        stats.setAttribute('hidden', true)
     }
     const handleUserManage = () => {
         let user = document.getElementById('user')
@@ -52,11 +52,11 @@ function SideBar() {
 
         user.removeAttribute('hidden')
         product.setAttribute('hidden', true)
-        managePrice.setAttribute('hidden',true)
+        managePrice.setAttribute('hidden', true)
         category.setAttribute('hidden', true)
         brand.setAttribute('hidden', true)
         order.setAttribute('hidden', true)
-        stats.setAttribute('hidden',true)
+        stats.setAttribute('hidden', true)
     }
     const handleCategoryManage = () => {
         let user = document.getElementById('user')
@@ -69,11 +69,11 @@ function SideBar() {
 
         category.removeAttribute('hidden')
         product.setAttribute('hidden', true)
-        managePrice.setAttribute('hidden',true)
+        managePrice.setAttribute('hidden', true)
         user.setAttribute('hidden', true)
         brand.setAttribute('hidden', true)
         order.setAttribute('hidden', true)
-        stats.setAttribute('hidden',true)
+        stats.setAttribute('hidden', true)
     }
     const handleBrandManage = () => {
         let user = document.getElementById('user')
@@ -86,11 +86,11 @@ function SideBar() {
 
         brand.removeAttribute('hidden')
         product.setAttribute('hidden', true)
-        managePrice.setAttribute('hidden',true)
+        managePrice.setAttribute('hidden', true)
         user.setAttribute('hidden', true)
         category.setAttribute('hidden', true)
         order.setAttribute('hidden', true)
-        stats.setAttribute('hidden',true)
+        stats.setAttribute('hidden', true)
     }
     const handleOrderManage = () => {
         let user = document.getElementById('user')
@@ -103,8 +103,8 @@ function SideBar() {
 
         order.removeAttribute('hidden')
         product.setAttribute('hidden', true)
-        managePrice.setAttribute('hidden',true)
-        stats.setAttribute('hidden',true)
+        managePrice.setAttribute('hidden', true)
+        stats.setAttribute('hidden', true)
         user.setAttribute('hidden', true)
         category.setAttribute('hidden', true)
         brand.setAttribute('hidden', true)
@@ -120,21 +120,25 @@ function SideBar() {
 
         stats.removeAttribute('hidden')
         product.setAttribute('hidden', true)
-        managePrice.setAttribute('hidden',true)
-        order.setAttribute('hidden',true)
+        managePrice.setAttribute('hidden', true)
+        order.setAttribute('hidden', true)
         user.setAttribute('hidden', true)
         category.setAttribute('hidden', true)
         brand.setAttribute('hidden', true)
     }
     const handleLogout = () => {
         dispatch(authAction.logout())
-        window.location.href='/'
+        window.location.href = '/'
     }
     return (
-        <Collapse.Group css={{ width: '100%'}}>
+        <Collapse.Group css={{ width: '100%' }}>
             {userCur.role === 'ROLE_ADMIN' ?
-            
+
                 <>
+                    <div className="flex flex-col items-center mt-5">
+                    <img src={require('../../../asset/ShoesLogo.png')} alt="ShoesLogo" style={{ width: '100px', height: '100px' }} />
+                    <span className="font-semibold text-lg tracking-tight mt-4">&nbsp;&nbsp;SNEAKERHEAD SHOP</span>
+                    </div>
                     <Collapse title={userCur.name} contentLeft={<Avatar
                         size="lg"
                         src={userCur.avatar}
@@ -142,26 +146,26 @@ function SideBar() {
                     />}>
                         <Button onClick={handleLogout} light auto color={'error'}>Đăng xuất</Button>
                     </Collapse>
-                    <Collapse contentLeft={<BarChart/>} title="Thống kê">
+                    <Collapse contentLeft={<BarChart />} title="Thống kê">
                         <Button onClick={handleStatistic} light auto color={'primary'}>Xem thống kê</Button>
                     </Collapse>
-                    <Collapse contentLeft={<Person/>} title="Tài khoản">
+                    <Collapse contentLeft={<Person />} title="Tài khoản">
                         <Button onClick={handleUserManage} light auto color={'primary'}>Quản lý tài khoản </Button>
                     </Collapse>
-                    <Collapse contentLeft={<Inventory/>} title="Sản phẩm">
+                    <Collapse contentLeft={<Inventory />} title="Sản phẩm">
                         <Button onClick={handleProductManage} light auto color={'primary'}>Quản lý sản phẩm </Button>
                         <Button onClick={handleProductManagePrice} light auto color={'primary'}>Quản lý giá sản phẩm </Button>
                     </Collapse>
-                    <Collapse contentLeft={<Category/>} title="Danh mục">
+                    <Collapse contentLeft={<Category />} title="Danh mục">
                         <Button onClick={handleCategoryManage} light auto color={'primary'}>Quản lý danh mục </Button>
                     </Collapse>
-                    <Collapse contentLeft={<BrandingWatermark/>} title="Nhãn hàng">
+                    <Collapse contentLeft={<BrandingWatermark />} title="Nhãn hàng">
                         <Button onClick={handleBrandManage} light auto color={'primary'}>Quản lý nhãn hàng </Button>
                     </Collapse>
-                    <Collapse contentLeft={<ReceiptLong/>} title="Đơn hàng">
+                    <Collapse contentLeft={<ReceiptLong />} title="Đơn hàng">
                         <Button onClick={handleOrderManage} light auto color={'primary'}>Quản lý đơn hàng</Button>
                     </Collapse>
-                    
+
                 </> :
                 <>
                     <Collapse title={userCur.name} contentLeft={<Avatar
@@ -171,10 +175,10 @@ function SideBar() {
                     />}>
                         <Button onClick={handleLogout} light auto color={'warning'}>Đăng xuất</Button>
                     </Collapse>
-                    <Collapse contentLeft={<Inventory/>} title="Sản phẩm">
+                    <Collapse contentLeft={<Inventory />} title="Sản phẩm">
                         <Button onClick={handleProductManage} light auto color={'warning'}>Quản lý sản phẩm </Button>
                     </Collapse>
-                    <Collapse contentLeft={<ReceiptLong/>} title="Đơn hàng">
+                    <Collapse contentLeft={<ReceiptLong />} title="Đơn hàng">
                         <Button onClick={handleOrderManage} light auto color={'warning'}>Quản lý đơn hàng</Button>
                     </Collapse>
                 </>

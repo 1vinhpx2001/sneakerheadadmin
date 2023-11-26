@@ -196,12 +196,12 @@ function Statistic({ stats, show }) {
                     </div>
                     <Input underlined shadow={false} type={'date'} label='Thời điểm bắt đầu' value={from} onChange={handleChangeFrom} />
                     <Input underlined shadow={false} type={'date'} label='Thời điểm kết thúc' value={to} onChange={handleChangeTo} />
-                    <Button disabled={(from === '' || to === '' || loading) ? true : false} css={{ marginTop: '$2' }} auto ghost color={'warning'} onClick={hanleClickStats}>Xem thống kê</Button>
+                    <Button disabled={(from === '' || to === '' || loading) ? true : false} css={{ marginTop: '$2' }} auto solic color={'primary'} onClick={hanleClickStats}>Xem thống kê</Button>
                 </Row>
                 {loading ? <>
                     <Grid.Container wrap="wrap" justify="center" gap={2} >
                         <Grid xs={12} css={{ w: '100vw', h: '100vh' }} alignItems='center' justify="center">
-                            <Loading size='xl' type='gradient' color={'warning'} />
+                            <Loading size='xl' type='gradient' color={'primary'} />
                         </Grid>
                     </Grid.Container>
                 </> :

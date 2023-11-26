@@ -60,7 +60,7 @@ function Admin() {
         {products.length === 0 || orders.length === 0 ?
           <Grid.Container wrap="wrap" justify="center" gap={2} >
             <Grid xs={12} css={{ w: '100vw', h: '100vh' }} alignItems='center' justify="center">
-              <Loading size='xl' type='gradient' color={'warning'} />
+              <Loading size='xl' type='gradient' color={'primary'} />
             </Grid>
           </Grid.Container>
           : <>
@@ -71,7 +71,7 @@ function Admin() {
         {products.length === 0 || orders.length === 0 || brands.length === 0 || users.length === 0 || categories.length === 0 ? <>
           <Grid.Container wrap="wrap" justify="center" gap={2} >
             <Grid xs={12} css={{ w: '100vw', h: '100vh' }} alignItems='center' justify="center">
-              <Loading size='xl' type='gradient' color={'warning'} />
+              <Loading size='xl' type='gradient' color={'primary'} />
             </Grid>
           </Grid.Container>
         </> : <>
