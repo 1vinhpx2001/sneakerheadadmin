@@ -385,10 +385,10 @@ export function AddOptionModal({ productId }) {
                     }
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant='contained' color="error" onClick={closeHandler} sx={{ marginRight: 1,textTransform:'none' }}>
+                    <Button variant='contained' color="error" onClick={closeHandler} sx={{ marginRight: 1, textTransform: 'none' }}>
                         Huỷ
                     </Button>
-                    <Button variant='contained' onClick={handleSave} sx={{textTransform:'none'}}>
+                    <Button variant='contained' onClick={handleSave} sx={{ textTransform: 'none' }}>
                         Lưu
                     </Button>
                 </Modal.Footer>
@@ -491,10 +491,10 @@ export function EditAttrModal({ attr, productId }) {
                     />
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant='contained' color="error" onClick={closeHandler} sx={{ marginRight: 1,textTransform:'none' }}>
+                    <Button variant='contained' color="error" onClick={closeHandler} sx={{ marginRight: 1, textTransform: 'none' }}>
                         Huỷ
                     </Button>
-                    <Button variant='contained' onClick={handleSave} sx={{textTransform:'none'}}>
+                    <Button variant='contained' onClick={handleSave} sx={{ textTransform: 'none' }}>
                         Lưu
                     </Button>
                 </Modal.Footer>
@@ -597,10 +597,10 @@ export function AddAttrModal({ productId }) {
                     />
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant='contained' color="error" onClick={closeHandler} sx={{ marginRight: 1,textTransform:'none' }}>
+                    <Button variant='contained' color="error" onClick={closeHandler} sx={{ marginRight: 1, textTransform: 'none' }}>
                         Huỷ
                     </Button>
-                    <Button variant='contained' onClick={handleSave} sx={{textTransform:'none'}}>
+                    <Button variant='contained' onClick={handleSave} sx={{ textTransform: 'none' }}>
                         Lưu
                     </Button>
                 </Modal.Footer>
@@ -824,8 +824,17 @@ function UpdateProduct() {
                                                 </Dropdown>
                                             </Grid>
                                             <Grid item xs={12}>
-                                                <label style={{ fontSize: 12 }}>Mô tả sản phẩm</label>
-                                                <ReactQuill theme="snow" value={product.description} onChange={handleChangeDes} />
+                                                <div className='flex flex-col'>
+                                                    <label htmlFor='productdes' className='text-gray-500 text-xs mb-2' style={{ fontSize: 13 }}>Mô tả sản phẩm</label>
+                                                    <textarea
+                                                        name="productdes"
+                                                        id="productdes"
+                                                        cols="50"
+                                                        rows="6"
+                                                        value={product.description}
+                                                        className='border border-gray-300'
+                                                        onChange={handleChangeDes} />
+                                                </div>
                                             </Grid>
                                         </Grid>
                                     </React.Fragment>
@@ -833,7 +842,7 @@ function UpdateProduct() {
                                     <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                                         <Button
                                             variant="contained"
-                                            sx={{ mt: 3, ml: 1,textTransform:'none' }}
+                                            sx={{ mt: 3, ml: 1, textTransform: 'none' }}
                                             onClick={handleSave}
                                         >
                                             Lưu
