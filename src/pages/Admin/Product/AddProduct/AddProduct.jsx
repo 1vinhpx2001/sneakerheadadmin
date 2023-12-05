@@ -86,7 +86,7 @@ function AddProduct() {
         setBrand(e.target.value)
     }
     const handleChangeDes = (e) => {
-        setDes(e)
+        setDes(e.target.value)
 
     }
     const handleChangeSize = (e) => {

@@ -646,7 +646,7 @@ function UpdateProduct() {
         setProduct({ ...product, discount: e.target.value })
     }
     const handleChangeDes = (e) => {
-        setProduct(product => { return { ...product, description: e } })
+        setProduct(product => { return { ...product, description: e.target.value } })
     }
     const updateProduct = async (data, id) => {
         if (validator.isEmpty(data.name)) {
@@ -823,7 +823,7 @@ function UpdateProduct() {
                                                     </Dropdown.Menu>
                                                 </Dropdown>
                                             </Grid>
-                                            <Grid item xs={12}>
+                                            <Grid xs={12}>
                                                 <div className='flex flex-col'>
                                                     <label htmlFor='productdes' className='text-gray-500 text-xs mb-2' style={{ fontSize: 13 }}>Mô tả sản phẩm</label>
                                                     <textarea
