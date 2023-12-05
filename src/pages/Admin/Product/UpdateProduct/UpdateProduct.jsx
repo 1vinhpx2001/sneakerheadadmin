@@ -824,8 +824,8 @@ function UpdateProduct() {
                                                 </Dropdown>
                                             </Grid>
                                             <Grid xs={12}>
-                                                <div className='flex flex-col'>
-                                                    <label htmlFor='productdes' className='text-gray-500 text-xs mb-2' style={{ fontSize: 13 }}>Mô tả sản phẩm</label>
+                                                <div className='ml-5 flex flex-col'>
+                                                    <label htmlFor='productdes' className=' text-xs mb-2' style={{ fontSize: 13 }}>Mô tả sản phẩm</label>
                                                     <textarea
                                                         name="productdes"
                                                         id="productdes"
