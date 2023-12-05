@@ -399,7 +399,13 @@ function AddProduct() {
                                 </Grid>
                                 <Grid item xs={12}>
                                     <label style={{ fontSize: 13 }}>Mô tả sản phẩm</label>
-                                    <ReactQuill theme="snow" value={description} onChange={handleChangeDes} />
+                                    <textarea 
+                                    name="productdes"
+                                    id="productdes"
+                                    cols="50"
+                                    rows="3" 
+                                    value={description} 
+                                    onChange={handleChangeDes} />
                                 </Grid>
                             </Grid>
                         </> : <></>}
