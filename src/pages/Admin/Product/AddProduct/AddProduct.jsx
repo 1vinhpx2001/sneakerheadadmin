@@ -398,14 +398,17 @@ function AddProduct() {
                                     </FormControl>
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <label style={{ fontSize: 13 }}>Mô tả sản phẩm</label>
+                                    <div className='flex flex-col'>
+                                    <label htmlFor='productdes' className='text-gray-500 text-xs mb-2' style={{ fontSize: 13 }}>Mô tả sản phẩm</label>
                                     <textarea 
                                     name="productdes"
                                     id="productdes"
                                     cols="50"
-                                    rows="3" 
+                                    rows="6" 
                                     value={description} 
+                                    className='border border-gray-300'
                                     onChange={handleChangeDes} />
+                                    </div>
                                 </Grid>
                             </Grid>
                         </> : <></>}
