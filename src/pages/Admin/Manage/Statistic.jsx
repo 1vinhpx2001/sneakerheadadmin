@@ -31,6 +31,7 @@ function Statistic({ stats, show }) {
     }
     const handleChangeFrom = (e) => {
         setFrom(e.target.value)
+        console.log(from)
     }
     const handleChangeTo = (e) => {
         setTo(e.target.value)
@@ -208,11 +209,11 @@ function Statistic({ stats, show }) {
                     <div hidden={data.length === 0 ? true : false}>
                         <ResponsiveContainer width={'100%'} aspect={3}>
                             <LineChart
+                            className="ml-12"
                                 data={data}
                                 margin={{
                                     top: 20,
                                     right: 30,
-                                    left: 20,
                                     bottom: 5,
                                 }}
                             >
