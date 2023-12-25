@@ -125,7 +125,7 @@ function ManagePrice({ products, show }) {
         <div hidden={show} id='managePrice'>
             <Row justify='space-between' align='center' css={{ marginTop: '$5', marginBottom: '$5' }}>
                 <Text b size={20}>SẢN PHẨM</Text>
-                <Text b size={20}>{newPrice}</Text>
+                {/* <Text b size={20}>{newPrice}</Text> */}
             </Row>
             <Row justify='space-between' align='center' css={{ marginBottom: '$4' }}>
                 <Popover placement='bottom-left'>
